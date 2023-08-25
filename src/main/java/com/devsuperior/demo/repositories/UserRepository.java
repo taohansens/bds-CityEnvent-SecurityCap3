@@ -10,8 +10,6 @@ import java.util.List;
 
 @Repository
 public interface UserRepository extends JpaRepository<User, Long> {
-    User findByEmail(String email);
-
     @Query(nativeQuery = true, value = """
             SELECT tb_user.email AS username, tb_user.password, tb_role.id AS roleId, tb_role.authority 
             FROM tb_user
@@ -20,5 +18,4 @@ public interface UserRepository extends JpaRepository<User, Long> {
             WHERE tb_user.email = :email
             """)
     List<UserDetailsProjection> searchUserAndRolesByEmail(String email);
-
 }

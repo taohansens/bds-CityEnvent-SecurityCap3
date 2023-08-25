@@ -1,9 +1,7 @@
 package com.devsuperior.demo.services;
 
 import com.devsuperior.demo.dto.CityDTO;
-import com.devsuperior.demo.dto.EventDTO;
 import com.devsuperior.demo.entities.City;
-import com.devsuperior.demo.entities.Event;
 import com.devsuperior.demo.repositories.CityRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Sort;
